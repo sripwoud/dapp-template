@@ -1,0 +1,27 @@
+name: main
+on:
+  # push trigger required to get coveralls monitoring of default branch
+  # pull_request required to get PR coveralls comments
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# no need to bother caching bun deps
+# https://github.com/oven-sh/setup-bun/issues/14#issuecomment-1714116221
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - name: Validate
+        run: |
+          bun concurrently \
+            -c auto \
+            -n format,lint,typecheck,build \
+            'bun dprint check' \
+            'bun biome check --config-path=.biome.jsonc .' \
+            'cd web &&bun tsc --p tsconfig.app.json --noEmit' \
+            'cd web && bun vite build'

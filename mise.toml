@@ -1,0 +1,27 @@
+[tasks.build]
+alias = "b"
+description = "Build the project"
+dir = "web"
+run = ["bun tsc -b", "bun vite build"]
+quiet = true
+
+[tasks.dev]
+alias = "d"
+description = "Start the dev server"
+dir = "web"
+run = "bun vite"
+quiet = true
+
+[tasks.preview]
+alias = "p"
+description = "Preview the app"
+dir = "web"
+run = "bun vite preview"
+quiet = true
+
+[tools]
+bun = "latest"
+"cargo:convco" = "latest"
+hk = "latest"
+lefthook = "latest"
+pkl = "latest"

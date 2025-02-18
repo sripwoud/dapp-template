@@ -1,0 +1,17 @@
+amends "https://hk.jdx.dev/v0/hk.pkl"
+// import "https://hk.jdx.dev/v0/builtins/prettier.pkl"
+
+min_hk_version = "0.2.3"
+
+`pre-commit` {
+  ["format"] {
+    fix_all = "bun dprint fmt"
+  }
+  ["lint"] {
+    check = "bun biome lint --config-path=.biome.jsonc --no-errors-on-unmatched {{files}}"
+  }
+
+  ["typecheck"] {
+    check_all = "bun tsc-files web/src/**/*.{ts,tsx} --noEmit -p web/tsconfig.json -p web/tsconfig.app.json -p web/tsconfig.node.json"
+  }
+}
