@@ -7,14 +7,28 @@ on:
   pull_request:
     branches: [main]
 
-# no need to bother caching bun deps
-# https://github.com/oven-sh/setup-bun/issues/14#issuecomment-1714116221
 jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+      - run: forge coverage --report lcov --report-file lcov.info
+      - uses: coverallsapp/github-action@v2.3.0
+        with:
+          format: lcov
+          file: lcov.info
+
+  # no need to bother caching bun deps
+  # https://github.com/oven-sh/setup-bun/issues/14#issuecomment-1714116221
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+      - uses: foundry-rs/foundry-toolchain@v1
       - run: bun install
       - name: Validate
         run: |

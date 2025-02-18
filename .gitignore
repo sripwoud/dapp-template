@@ -1,6 +1,8 @@
-node_modules
-dist
+cache
 coverage
+dist
 lcov.info
+node_modules
+out
 .env
 .zed

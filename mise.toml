@@ -1,5 +1,14 @@
-[tasks.build]
-alias = "b"
+[env]
+MISE_CARGO_BINSTALL = true
+
+[tasks."build:contracts"]
+alias = "bc"
+description = "Build the contracts"
+run = "forge b"
+quiet = true
+
+[tasks."build:web"]
+alias = "bw"
 description = "Build the project"
 dir = "web"
 run = ["bun tsc -b", "bun vite build"]
@@ -19,9 +28,18 @@ dir = "web"
 run = "bun vite preview"
 quiet = true
 
+[tasks."test:contracts"]
+alias = "tc"
+description = "Run the contracts tests"
+run = "forge test"
+quiet = true
+
 [tools]
 bun = "latest"
+cargo-binstall = "latest"
 "cargo:convco" = "latest"
+"cargo:https://github.com/foundry-rs/foundry" = { version = "tag:stable", crate = "forge" }
+"cargo:soldeer" = "latest"
 hk = "latest"
-lefthook = "latest"
 pkl = "latest"
+rust = "latest"

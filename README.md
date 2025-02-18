@@ -1,7 +1,8 @@
-| <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" /> | WEB APP TEMPLATE |
-| ------------------------------------------------------------------------------------------------------------- | ---------------- |
+| <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidity/solidity-original.svg" /> | ETH DAPP TEMPLATE |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------- |
 
-![main GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sripwoud/web-app-template/main.yml?branch=main&label=main)
+![main GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sripwoud/eth-dapp-template/main.yml?branch=main&label=main)
+[![Coverage Status](https://coveralls.io/repos/github/sripwoud/eth-dapp-template/badge.svg?branch=main)](https://coveralls.io/github/sripwoud/eth-dapp-template?branch=main)
 
 | Feature                                        | With                                                                                                                                        | Configuration File                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -16,9 +17,9 @@
 | Linting                                        | [biome](https://biomejs.dev/)                                                                                                               | [.biome.jsonc](./.biome.jsonc)                                                                                             |
 | Routing                                        | [@tanstack/react-router](https://tanstack.com/router/latest)                                                                                | [router.ts](./web/src/lib/router.ts)                                                                                       |
 | Runtime, tests runner                          | [bun](https://bun.sh)                                                                                                                       | [bunfig.toml](./bunfig.toml)                                                                                               |
+| Smart Contract Development Tools               | [foundry](https://book.getfoundry.sh/)                                                                                                      | [foundry.toml](./foundry.toml)                                                                                             |
 | State                                          | [jotai](https://jotai.org/)                                                                                                                 |                                                                                                                            |
 | Tasks Runner, Environment & Runtime Management | [mise](https://mise.dev/)                                                                                                                   | [mise.toml](./mise.toml)                                                                                                   |
-| Typings                                        | [typescript](https://www.typescriptlang.org/)                                                                                               | [tsconfig.json](./tsconfig.json)                                                                                           |
 
 ## Develop
 
