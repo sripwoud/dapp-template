@@ -1,3 +1,6 @@
+[env]
+MISE_CARGO_BINSTALL = true
+
 [tasks.build]
 alias = "b"
 description = "Build the project"
@@ -21,7 +24,10 @@ quiet = true
 
 [tools]
 bun = "latest"
+cargo-binstall = "latest"
 "cargo:convco" = "latest"
+"cargo:https://github.com/foundry-rs/foundry" = { version = "tag:stable", crate = "forge" }
+"cargo:soldeer" = "latest"
 hk = "latest"
-lefthook = "latest"
 pkl = "latest"
+rust = "latest"

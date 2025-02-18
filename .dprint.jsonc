@@ -1,5 +1,5 @@
 {
-  "excludes": ["web/src/routeTree.gen.ts"],
+  "excludes": ["contracts/lib", "web/src/routeTree.gen.ts"],
   "extends": [
     "https://raw.githubusercontent.com/sripwoud/configs/main/packages/dprint/.dprint.ts.jsonc",
   ],

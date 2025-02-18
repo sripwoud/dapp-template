@@ -1,0 +1,15 @@
+[profile.default]
+auto_detect_remappings = true
+broadcast = "contracts/broadcast"
+cache_path = "contracts/cache"
+libs = ["contracts/lib"]
+out = "contracts/out"
+script = "contracts/script"
+src = "contracts/src"
+test = "contracts/test"
+
+remappings = [
+  "forge-std/=contracts/lib/forge-std/src/",
+  "src/=contracts/src/",
+  "test/=contracts/test/",
+]
