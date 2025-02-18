@@ -1,8 +1,14 @@
 [env]
 MISE_CARGO_BINSTALL = true
 
-[tasks.build]
-alias = "b"
+[tasks."build:contracts"]
+alias = "bc"
+description = "Build the contracts"
+run = "forge b"
+quiet = true
+
+[tasks."build:web"]
+alias = "bw"
 description = "Build the project"
 dir = "web"
 run = ["bun tsc -b", "bun vite build"]
@@ -20,6 +26,12 @@ alias = "p"
 description = "Preview the app"
 dir = "web"
 run = "bun vite preview"
+quiet = true
+
+[tasks."test:contracts"]
+alias = "tc"
+description = "Run the contracts tests"
+run = "forge test"
 quiet = true
 
 [tools]
