@@ -4,5 +4,5 @@ dist
 lcov.info
 node_modules
 out
-.env
+.env*
 .zed

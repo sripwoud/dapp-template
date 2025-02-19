@@ -4,12 +4,15 @@ min_hk_version = "0.2.3"
 
 `pre-commit` {
   ["format"] {
-    fix_all = "bun dprint fmt"
+    fix_all = "dprint fmt"
   }
-  ["lint"] {
-    check = "bun biome lint --config-path=.biome.jsonc --no-errors-on-unmatched {{files}}"
+  ["lint-sol"] {
+    check_all = "solhint --config contracts/.solhint.json --ignore-path contracts/.solhintignore contracts/**/*.sol"
+  }
+  ["lint-ts"] {
+    check_all = "biome lint --config-path=.biome.jsonc --no-errors-on-unmatched"
   }
   ["typecheck"] {
-    check_all = "bun tsc-files web/src/**/*.{ts,tsx} --noEmit -p web/tsconfig.json -p web/tsconfig.app.json -p web/tsconfig.node.json"
+    check_all = "tsc -p web/tsconfig.app.json"
   }
 }
