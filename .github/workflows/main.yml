@@ -28,15 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - uses: foundry-rs/foundry-toolchain@v1
       - run: forge soldeer update
+        working-directory: contracts
       - run: forge coverage --report lcov --report-file lcov.info
+        working-directory: contracts
       - uses: coverallsapp/github-action@v2.3.0
         with:
           format: lcov
-          file: lcov.info
+          file: contracts/lcov.info
 
   tests:
     needs: _tests

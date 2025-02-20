@@ -20,6 +20,7 @@ run = "anvil"
 
 [tasks."build:contracts"]
 alias = "bc"
+dir = "contracts"
 description = "Build the contracts"
 run = "forge b"
 quiet = true
@@ -47,6 +48,7 @@ quiet = true
 [tasks."deploy:sepolia"]
 alias = "ds"
 description = "Deploy the contracts to sepolia"
+dir = "contracts"
 run = """
 forge script \
   CounterScript \
@@ -76,6 +78,7 @@ quiet = true
 
 [tasks."test:contracts"]
 alias = "tc"
+dir = "contracts"
 description = "Run the contracts tests"
 run = "forge test"
 quiet = true
