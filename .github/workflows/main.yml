@@ -67,6 +67,6 @@ jobs:
             "npm:@biomejs/biome" = "latest"
             "npm:solhint" = "latest"
             "npm:typescript" = "latest"
-            forge = { version = "tag:stable", bin = "forge" }
+             "cargo:https://github.com/foundry-rs/foundry" = { version = "tag:stable", crate = "forge" }
       - run: bun i
       - run: mise check
