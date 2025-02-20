@@ -2,11 +2,11 @@
 auto_detect_remappings = true
 broadcast = "contracts/broadcast"
 cache_path = "contracts/cache"
-libs = ["contracts/lib"]
+libs = ["dependencies"]
 no_match_coverage = "contracts/script"
 out = "contracts/out"
 remappings = [
-  "forge-std/=contracts/lib/forge-std/src/",
+  "forge-std/=dependencies/forge-std-1.9.6/src/",
   "src/=contracts/src/",
   "test/=contracts/test/",
 ]
@@ -21,3 +21,6 @@ sepolia = { key = "${ETHERSCAN_API_KEY}" }
 [rpc_endpoints]
 localhost = "${ANVIL_RPC_URL}"
 sepolia = "${SEPOLIA_RPC_URL}"
+
+[dependencies]
+forge-std = "1.9.6"
