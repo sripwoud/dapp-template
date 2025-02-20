@@ -1,13 +1,13 @@
 import { QueryProvider } from './QueryProvider'
 import { RouterProvider } from './RouterProvider'
-import { ThirdwebProvider } from './ThirdwebProvider'
+import { WagmiProvider } from './WagmiProvider'
 
 export function Providers() {
   return (
-    <ThirdwebProvider>
+    <WagmiProvider>
       <QueryProvider>
         <RouterProvider />
       </QueryProvider>
-    </ThirdwebProvider>
+    </WagmiProvider>
   )
 }

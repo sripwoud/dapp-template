@@ -1,10 +1,8 @@
 import { Link } from '@tanstack/react-router'
 import { config } from 'l/config'
 import { capitalize } from 'l/format'
-import { thirdweb } from 'l/thirdweb'
-import { ConnectButton } from 'thirdweb/react'
 
-const links = ['form', 'query', 'state'] as const
+const links = ['form', 'query', 'state', 'web3'] as const
 
 export function Header() {
   return (
@@ -23,7 +21,6 @@ export function Header() {
           {capitalize(r)}
         </Link>
       ))}
-      <ConnectButton client={thirdweb} />
     </nav>
   )
 }
