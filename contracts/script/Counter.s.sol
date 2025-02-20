@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.28;
-
+// trigger
 import {Script} from "forge-std/Script.sol";
 import {Counter} from "src/Counter.sol";
 
