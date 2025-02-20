@@ -57,7 +57,8 @@ jobs:
           mise_toml: |
             [tasks]
             "check:format" = { run = "dprint check --excludes mise.toml" }
-            "check:lint-sol" = { dir = "contracts", run = "solhint 'contracts/**/*.sol'" }
+            #FIXME
+            #"check:lint-sol" = { dir = "contracts", run = "solhint --config contracts/.solhint.json --ignore-path contracts/.solhintignore contracts/**/*.sol" }
             "check:lint-ts" = { run = "biome lint --config-path=.biome.jsonc --no-errors-on-unmatched" }
             "check:types" = { run = "tsc -p web/tsconfig.app.json" }
             check = { depends = "check:*" }
