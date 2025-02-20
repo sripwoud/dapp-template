@@ -20,6 +20,7 @@ jobs:
           files: |
             foundry.toml
             contracts/**.sol
+      - run: echo "any_changed=${{ steps.changed-files.outputs.any_changed }}"
 
   _tests:
     needs: changed-files
