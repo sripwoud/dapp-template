@@ -10,6 +10,14 @@ remappings = [
   "src/=contracts/src/",
   "test/=contracts/test/",
 ]
+solc = "0.8.28"
 script = "contracts/script"
 src = "contracts/src"
 test = "contracts/test"
+
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+
+[rpc_endpoints]
+localhost = "${ANVIL_RPC_URL}"
+sepolia = "${SEPOLIA_RPC_URL}"

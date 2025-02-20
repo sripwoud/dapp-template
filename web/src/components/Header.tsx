@@ -1,8 +1,9 @@
+import { DynamicWidget } from '@dynamic-labs/sdk-react-core'
 import { Link } from '@tanstack/react-router'
 import { config } from 'l/config'
 import { capitalize } from 'l/format'
 
-const links = ['form', 'query', 'state'] as const
+const links = ['form', 'query', 'state', 'web3'] as const
 
 export function Header() {
   return (
@@ -21,6 +22,7 @@ export function Header() {
           {capitalize(r)}
         </Link>
       ))}
+      <DynamicWidget />
     </nav>
   )
 }
