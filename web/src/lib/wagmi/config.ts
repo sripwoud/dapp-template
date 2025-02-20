@@ -1,15 +1,16 @@
-import { createConfig, http } from 'wagmi'
-import { anvil, sepolia } from 'wagmi/chains'
+import { createConfig, http } from "wagmi";
+import { anvil, sepolia } from "wagmi/chains";
 
-declare module 'wagmi' {
+declare module "wagmi" {
   interface Register {
-    config: typeof config
+    config: typeof config;
   }
 }
 export const config = createConfig({
   chains: [anvil, sepolia],
+  multiInjectedProviderDiscovery: false,
   transports: {
     [anvil.id]: http(),
     [sepolia.id]: http(),
   },
-})
+});
