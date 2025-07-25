@@ -1,4 +1,4 @@
-import { createRootRoute } from '@tanstack/react-router'
-import { Layout as component } from 'c/Layout'
+import { createRootRoute } from "@tanstack/react-router";
+import { Layout as component } from "c/Layout";
 
-export const Route = createRootRoute({ component })
+export const Route = createRootRoute({ component });

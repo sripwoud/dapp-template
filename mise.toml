@@ -94,7 +94,7 @@ hk = "latest"
 "npm:solhint" = "latest"
 "npm:typescript" = "latest"
 pkl = "latest"
-anvil = { version = "tag:stable", bin = "anvil" }
-cast = { version = "tag:stable", bin = "cast" }
-chisel = { version = "tag:stable", bin = "chisel" }
-forge = { version = "tag:stable", bin = "forge" }
+anvil = { version = "tag:stable", crate = "anvil", bin = "anvil" }
+cast = { version = "tag:stable", crate = "cast", bin = "cast" }
+chisel = { version = "tag:stable", crate = "chisel", bin = "chisel" }
+forge = { version = "tag:stable", crate = "forge", bin = "forge" }

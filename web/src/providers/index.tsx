@@ -1,8 +1,8 @@
-import { DynamicWagmiConnector } from '@dynamic-labs/wagmi-connector'
-import { DynamicProvider } from './DynamicProvider'
-import { QueryProvider } from './QueryProvider'
-import { RouterProvider } from './RouterProvider'
-import { WagmiProvider } from './WagmiProvider'
+import { DynamicWagmiConnector } from "@dynamic-labs/wagmi-connector";
+import { DynamicProvider } from "./DynamicProvider";
+import { QueryProvider } from "./QueryProvider";
+import { RouterProvider } from "./RouterProvider";
+import { WagmiProvider } from "./WagmiProvider";
 
 export function Providers() {
   return (
@@ -15,5 +15,5 @@ export function Providers() {
         </QueryProvider>
       </WagmiProvider>
     </DynamicProvider>
-  )
+  );
 }
