@@ -1,3 +1,4 @@
+import { porto } from "porto/wagmi";
 import { createConfig, http } from "wagmi";
 import { anvil, sepolia } from "wagmi/chains";
 
@@ -8,7 +9,7 @@ declare module "wagmi" {
 }
 export const config = createConfig({
   chains: [anvil, sepolia],
-  multiInjectedProviderDiscovery: false,
+  connectors: [porto()],
   transports: {
     [anvil.id]: http(),
     [sepolia.id]: http(),

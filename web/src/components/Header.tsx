@@ -1,5 +1,5 @@
-import { DynamicWidget } from "@dynamic-labs/sdk-react-core";
 import { Link } from "@tanstack/react-router";
+import { Connect } from "c/Connect";
 import { config } from "l/config";
 import { capitalize } from "l/format";
 
@@ -22,7 +22,7 @@ export function Header() {
           {capitalize(r)}
         </Link>
       ))}
-      <DynamicWidget />
+      <Connect />
     </nav>
   );
 }

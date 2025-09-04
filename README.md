@@ -21,6 +21,7 @@
 | Smart Contract Development Tools                                                                                      | [foundry](https://book.getfoundry.sh/)                                                                                                      | [foundry.toml](./foundry.toml)                                                                                             |
 | State                                                                                                                 | [jotai](https://jotai.org/)                                                                                                                 |                                                                                                                            |
 | Tasks Runner, Environment & Runtime Management                                                                        | [mise](https://mise.dev/)                                                                                                                   | [mise.toml](./mise.toml)                                                                                                   |
+| Web3                                                                                                                  | [wagmi](https://wagmi.sh), [porto](https://porto.sh)                                                                                        | [wagmi.config.ts](web/wagmi.config.ts), [config.ts](web/src/lib/wagmi/config.ts)                                           |
 
 ## Develop
 
