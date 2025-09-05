@@ -3,5 +3,5 @@ interface Config {
 }
 
 export const config: Config = {
-  appName: "web-app-template",
+  appName: "dapp-template",
 };
