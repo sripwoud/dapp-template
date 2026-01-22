@@ -27,7 +27,7 @@ jobs:
         with:
           mise_toml: |
             [tasks]
-            build-contracts = { dir = "contracts", run = ["forge soldeer upadte", "forge b"] }
+            build-contracts = { dir = "contracts", run = ["forge soldeer update", "forge b"] }
             build = { depends = "build-contracts", dir = "web", run = ["tsc -b", "bun vite build"] }
             [tools]
             "npm:typescript" = "latest"
