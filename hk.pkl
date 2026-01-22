@@ -11,9 +11,11 @@ local linters  = new Mapping<String, Step> {
   }
   ["solhint"] {
     check = "solhint --config contracts/.solhint.json --ignore-path contracts/.solhintignore contracts/**/*.sol"
+    glob = List("*.sol")
   }
   ["typescript"]  {
     check = "tsc -p web/tsconfig.app.json"
+    glob = List("*js", "*.ts", "*.tsx")
   }
 }
 
